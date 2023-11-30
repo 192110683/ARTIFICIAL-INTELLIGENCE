@@ -1,0 +1,20 @@
+class VacuumCleaner:     def __init__(self, position=0): 
+        self.position = position 
+ 
+    def move(self): 
+        self.position = random.choice([-1, 1])  # Move left or right 
+ 
+    def clean(self): 
+        print(f"Cleaning at position {self.position}") 
+ 
+def simulate_vacuum_cleaner(steps): 
+    cleaner = VacuumCleaner() 
+ 
+    for step in range(steps): 
+        cleaner.move() 
+        cleaner.clean() 
+ 
+if __name__ == "__main__": 
+    simulation_steps = 10     simulate_vacuum_cleaner(simulation_steps) 
+ 
+ 
