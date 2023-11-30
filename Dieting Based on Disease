@@ -1,0 +1,8 @@
+% Define facts about foods and their sugar content sugar_content(apple, 10). sugar_content(banana, 15). sugar_content(carrot, 5). 
+sugar_content(chocolate, 30). sugar_content(cake, 40). 
+ 
+% Define a rule to check if a person should follow a low-sugar diet based on a disease should_follow_diet(Person, Disease) :-     diabetic(Person),      % Rule: Person is diabetic     disease_diet(Disease, Diet),  % Rule: Diet for the specific disease     write('You should follow a '), write(Diet), write(' diet. Avoid high-sugar foods.'). 
+ 
+% Define specific diets for diseases disease_diet(diabetes, 'low-sugar'). 
+ 
+% Define individuals with health conditions diabetic(john). 
