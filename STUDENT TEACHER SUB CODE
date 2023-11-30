@@ -1,0 +1,9 @@
+% Facts representing relationships between students, teachers, and subjects teaches(teacher_alice, math101). teaches(teacher_bob, physics201). teaches(teacher_charlie, english301). 
+ 
+enrolled(student_john, math101). enrolled(student_jane, physics201). enrolled(student_joe, english301). enrolled(student_jane, math101). 
+ 
+% Query to find the teacher of a subject teacher_of_subject(Subject, Teacher) :-     teaches(Teacher, Subject). 
+ 
+% Query to find students enrolled in a subject students_of_subject(Subject, Students) :-     enrolled(Students, Subject). 
+ 
+% Query to find subjects taught by a teacher subjects_taught_by_teacher(Teacher, Subjects) :-     teaches(Teacher, Subjects). 
