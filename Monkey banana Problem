@@ -1,0 +1,13 @@
+% Initial state: monkey is on the left side without banana, boat is on the left state(left, left, left). 
+ 
+% Final state: monkey, banana, and boat are all on the right side state(right, right, right). 
+ 
+% Valid moves 
+move(state(left, left, left), grab, state(left, left, in_boat)). move(state(left, left, in_boat), row, state(right, right, right)). move(state(right, right, right), drop, state(right, right, in_boat)). 
+move(state(right, right, in_boat), row, state(left, left, left)). 
+ 
+% Helper predicate to check if a state is valid valid_state(state(Monkey, Banana, Boat)) :-     member(Monkey, [left, right]),     member(Banana, [left, right]),     member(Boat, [left, right]). 
+ 
+% Predicate to perform a sequence of moves 
+perform_moves([], State, State). perform_moves([Move | Moves], CurrentState, FinalState) :-     move(CurrentState, Move, NewState), 
+    valid_state(NewState), perform_moves(Moves, NewState, FinalState).
