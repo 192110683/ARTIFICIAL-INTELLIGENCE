@@ -1,0 +1,4 @@
+% Facts representing information about planets planet(mercury, rocky, 0.39, 0.24). planet(venus, rocky, 0.72, 0.62). planet(earth, rocky, 1.0, 1.0). planet(mars, rocky, 1.52, 0.11). planet(jupiter, gas_giant, 5.2, 317.8). planet(saturn, gas_giant, 9.58, 95.2). planet(uranus, ice_giant, 19.22, 14.5). planet(neptune, ice_giant, 30.05, 17.2). 
+ 
+% Query to get information about a specific planet planet_info(Name, Type, DistanceFromSun, Mass) :-     planet(Name, Type, DistanceFromSun, Mass). 
+ 
