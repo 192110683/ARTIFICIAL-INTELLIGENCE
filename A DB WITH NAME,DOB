@@ -1,0 +1,6 @@
+% Facts representing the database dob(john, '1990-05-15'). dob(jane, '1985-12-20'). dob(bob, '1995-08-10'). dob(alice, '1980-03-25'). 
+ 
+% Query to retrieve the date of birth for a given person get_dob(Person, DateOfBirth) :-     dob(Person, DateOfBirth). 
+ 
+% Query to check if two persons have the same date of birth same_dob(Person1, Person2) :-     dob(Person1, DateOfBirth),     dob(Person2, DateOfBirth),     Person1 \= Person2. 
+ 
