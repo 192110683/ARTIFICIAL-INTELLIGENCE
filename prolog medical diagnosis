@@ -1,0 +1,6 @@
+% Facts about symptoms and possible diseases symptom(john, fever). symptom(john, cough). symptom(jane, headache). symptom(jane, fever). symptom(bob, cough). symptom(bob, fatigue). 
+ 
+disease(fever, flu). disease(cough, cold). 
+disease(headache, stress). disease(fatigue, anemia). 
+ 
+% Rules for diagnosis diagnose(Patient, Disease) :-     symptom(Patient, Symptom),     disease(Symptom, Disease). 
